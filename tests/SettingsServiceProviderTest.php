@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Tests;
+namespace Digitonma\LaravelSettings\Tests;
 
 /**
  * Class     SettingsServiceProviderTest
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class SettingsServiceProviderTest extends TestCase
 {
@@ -16,7 +16,7 @@ class SettingsServiceProviderTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LaravelSettings\SettingsServiceProvider */
+    /** @var  \Digitonma\LaravelSettings\SettingsServiceProvider */
     private $provider;
 
     /* -----------------------------------------------------------------
@@ -28,7 +28,7 @@ class SettingsServiceProviderTest extends TestCase
     {
         parent::setUp();
 
-        $this->provider = $this->app->getProvider(\Arcanedev\LaravelSettings\SettingsServiceProvider::class);
+        $this->provider = $this->app->getProvider(\Digitonma\LaravelSettings\SettingsServiceProvider::class);
     }
 
     protected function tearDown(): void
@@ -51,7 +51,7 @@ class SettingsServiceProviderTest extends TestCase
             \Illuminate\Contracts\Support\DeferrableProvider::class,
             \Arcanedev\Support\Providers\ServiceProvider::class,
             \Arcanedev\Support\Providers\PackageServiceProvider::class,
-            \Arcanedev\LaravelSettings\SettingsServiceProvider::class
+            \Digitonma\LaravelSettings\SettingsServiceProvider::class
         ];
 
         foreach ($expectations as $expected) {
@@ -63,8 +63,8 @@ class SettingsServiceProviderTest extends TestCase
     public function it_can_provides(): void
     {
         $expected = [
-            \Arcanedev\LaravelSettings\Contracts\Manager::class,
-            \Arcanedev\LaravelSettings\Contracts\Store::class,
+            \Digitonma\LaravelSettings\Contracts\Manager::class,
+            \Digitonma\LaravelSettings\Contracts\Store::class,
         ];
 
         static::assertSame($expected, $this->provider->provides());

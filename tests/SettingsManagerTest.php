@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Tests;
+namespace Digitonma\LaravelSettings\Tests;
 
 /**
  * Class     SettingsManagerTest
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class SettingsManagerTest extends TestCase
 {
@@ -16,7 +16,7 @@ class SettingsManagerTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LaravelSettings\Contracts\Manager */
+    /** @var  \Digitonma\LaravelSettings\Contracts\Manager */
     protected $manager;
 
     /* -----------------------------------------------------------------
@@ -47,8 +47,8 @@ class SettingsManagerTest extends TestCase
     public function it_can_be_instantiated(): void
     {
         $expectations = [
-            \Arcanedev\LaravelSettings\Contracts\Manager::class,
-            \Arcanedev\LaravelSettings\SettingsManager::class,
+            \Digitonma\LaravelSettings\Contracts\Manager::class,
+            \Digitonma\LaravelSettings\SettingsManager::class,
         ];
 
         foreach ($expectations as $expected) {
@@ -60,8 +60,8 @@ class SettingsManagerTest extends TestCase
     public function it_can_be_instantiated_with_helper(): void
     {
         $expectations = [
-            \Arcanedev\LaravelSettings\Contracts\Manager::class,
-            \Arcanedev\LaravelSettings\SettingsManager::class,
+            \Digitonma\LaravelSettings\Contracts\Manager::class,
+            \Digitonma\LaravelSettings\SettingsManager::class,
         ];
 
         foreach ($expectations as $expected) {
@@ -78,11 +78,11 @@ class SettingsManagerTest extends TestCase
     /** @test */
     public function it_can_get_default_store_by_contract(): void
     {
-        $store = $this->app->make(\Arcanedev\LaravelSettings\Contracts\Store::class);
+        $store = $this->app->make(\Digitonma\LaravelSettings\Contracts\Store::class);
 
         $expectations = [
-            \Arcanedev\LaravelSettings\Contracts\Store::class,
-            \Arcanedev\LaravelSettings\Stores\JsonStore::class,
+            \Digitonma\LaravelSettings\Contracts\Store::class,
+            \Digitonma\LaravelSettings\Stores\JsonStore::class,
         ];
 
         foreach ($expectations as $expected) {
@@ -94,15 +94,15 @@ class SettingsManagerTest extends TestCase
     public function it_can_get_store_by_name(): void
     {
         $expectations = [
-            'array'    => \Arcanedev\LaravelSettings\Stores\ArrayStore::class,
-            'database' => \Arcanedev\LaravelSettings\Stores\DatabaseStore::class,
-            'json'     => \Arcanedev\LaravelSettings\Stores\JsonStore::class,
+            'array'    => \Digitonma\LaravelSettings\Stores\ArrayStore::class,
+            'database' => \Digitonma\LaravelSettings\Stores\DatabaseStore::class,
+            'json'     => \Digitonma\LaravelSettings\Stores\JsonStore::class,
         ];
 
         foreach ($expectations as $name => $expected) {
             $store = $this->manager->driver($name);
 
-            static::assertInstanceOf(\Arcanedev\LaravelSettings\Contracts\Store::class, $store);
+            static::assertInstanceOf(\Digitonma\LaravelSettings\Contracts\Store::class, $store);
             static::assertInstanceOf($expected, $store);
         }
     }
@@ -111,15 +111,15 @@ class SettingsManagerTest extends TestCase
     public function it_can_get_store_by_name_via_helper(): void
     {
         $expectations = [
-            'array'    => \Arcanedev\LaravelSettings\Stores\ArrayStore::class,
-            'database' => \Arcanedev\LaravelSettings\Stores\DatabaseStore::class,
-            'json'     => \Arcanedev\LaravelSettings\Stores\JsonStore::class,
+            'array'    => \Digitonma\LaravelSettings\Stores\ArrayStore::class,
+            'database' => \Digitonma\LaravelSettings\Stores\DatabaseStore::class,
+            'json'     => \Digitonma\LaravelSettings\Stores\JsonStore::class,
         ];
 
         foreach ($expectations as $name => $expected) {
             $store = settings($name);
 
-            static::assertInstanceOf(\Arcanedev\LaravelSettings\Contracts\Store::class, $store);
+            static::assertInstanceOf(\Digitonma\LaravelSettings\Contracts\Store::class, $store);
             static::assertInstanceOf($expected, $store);
         }
     }

@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings;
+namespace Digitonma\LaravelSettings;
 
-use Arcanedev\LaravelSettings\Contracts\Manager as ManagerContract;
-use Arcanedev\LaravelSettings\Contracts\Store as StoreContract;
+use Digitonma\LaravelSettings\Contracts\Manager as ManagerContract;
+use Digitonma\LaravelSettings\Contracts\Store as StoreContract;
 use Arcanedev\Support\Providers\PackageServiceProvider;
 use Illuminate\Contracts\Support\DeferrableProvider;
 
 /**
  * Class     SettingsServiceProvider
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class SettingsServiceProvider extends PackageServiceProvider implements DeferrableProvider
 {

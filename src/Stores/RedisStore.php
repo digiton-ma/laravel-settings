@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Stores;
+namespace Digitonma\LaravelSettings\Stores;
 
 use Illuminate\Redis\RedisManager;
 use Illuminate\Support\Arr;
@@ -10,7 +10,7 @@ use Illuminate\Support\Arr;
 /**
  * Class     RedisStore
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class RedisStore extends AbstractStore
 {

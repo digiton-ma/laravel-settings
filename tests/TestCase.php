@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Tests;
+namespace Digitonma\LaravelSettings\Tests;
 
-use Arcanedev\LaravelSettings\Contracts\Manager;
-use Arcanedev\LaravelSettings\Middleware\SaveSettings;
-use Arcanedev\LaravelSettings\SettingsServiceProvider;
+use Digitonma\LaravelSettings\Contracts\Manager;
+use Digitonma\LaravelSettings\Middleware\SaveSettings;
+use Digitonma\LaravelSettings\SettingsServiceProvider;
 use Illuminate\Contracts\Http\Kernel;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 
 /**
  * Class     TestCase
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 abstract class TestCase extends BaseTestCase
 {
@@ -64,7 +64,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * Get the settings manager instance.
      *
-     * @return \Arcanedev\LaravelSettings\Contracts\Manager
+     * @return \Digitonma\LaravelSettings\Contracts\Manager
      */
     protected function getSettingsManager(): Manager
     {

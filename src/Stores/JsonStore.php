@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Stores;
+namespace Digitonma\LaravelSettings\Stores;
 
-use Arcanedev\LaravelSettings\Utilities\Arr;
+use Digitonma\LaravelSettings\Utilities\Arr;
 use RuntimeException;
 
 /**
  * Class     JsonStore
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class JsonStore extends AbstractStore
 {

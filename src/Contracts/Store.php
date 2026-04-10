@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Contracts;
+namespace Digitonma\LaravelSettings\Contracts;
 
 /**
  * Interface  Store
  *
- * @author    ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author    digiton-ma <contact@digiton.ma>
  */
 interface Store
 {

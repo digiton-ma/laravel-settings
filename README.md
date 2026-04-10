@@ -1,20 +1,15 @@
 # LaravelSettings [![Packagist License][badge_license]](LICENSE.md) [![For Laravel][badge_laravel]][link-github-repo]
 
 [![Github Workflow Status][badge_build]][link-github-status]
-[![Coverage Status][badge_coverage]][link-scrutinizer]
-[![Scrutinizer Code Quality][badge_quality]][link-scrutinizer]
-[![SensioLabs Insight][badge_insight]][link-insight]
-[![Github Issues][badge_issues]][link-github-issues]
-
 [![Packagist][badge_package]][link-packagist]
 [![Packagist Release][badge_release]][link-packagist]
 [![Packagist Downloads][badge_downloads]][link-packagist]
 
-*By [ARCANEDEV&copy;](http://www.arcanedev.net/)*
+*By [digiton-ma](https://github.com/digiton-ma)*
 
 This package allows you to store/persists your settings data.
 
-Feel free to check out the [releases](https://github.com/ARCANEDEV/LaravelSettings/releases), [license](LICENSE.md), and [contribution guidelines](CONTRIBUTING.md).
+Feel free to check out the [releases](https://github.com/digiton-ma/laravel-settings/releases), [license](LICENSE.md), and [contribution guidelines](CONTRIBUTING.md).
 
 ### Features
 
@@ -33,7 +28,7 @@ Feel free to check out the [releases](https://github.com/ARCANEDEV/LaravelSettin
 
 ## Security
 
-If you discover any security related issues, please email arcanedev-maroc@gmail.com instead of using the issue tracker.
+If you discover any security related issues, please email contact@digiton.ma instead of using the issue tracker.
 
 ## Contribution
 
@@ -41,25 +36,19 @@ Any ideas are welcome. Feel free to submit any issues or pull requests, please c
 
 ## Credits
 
-- [ARCANEDEV][link-author]
+- [digiton-ma][link-author]
 - [All Contributors][link-contributors]
 
-[badge_license]:   https://img.shields.io/packagist/l/arcanedev/laravel-settings.svg?style=flat-square
+[badge_license]:   https://img.shields.io/packagist/l/digiton-ma/laravel-settings.svg?style=flat-square
 [badge_laravel]:   https://img.shields.io/badge/Laravel-5.2%20to%2011.x-orange.svg?style=flat-square
-[badge_build]:     https://img.shields.io/github/workflow/status/ARCANEDEV/LaravelSettings/run-tests?style=flat-square
-[badge_coverage]:  https://img.shields.io/scrutinizer/coverage/g/ARCANEDEV/LaravelSettings.svg?style=flat-square
-[badge_quality]:   https://img.shields.io/scrutinizer/g/ARCANEDEV/LaravelSettings.svg?style=flat-square
-[badge_insight]:   https://img.shields.io/sensiolabs/i/1ba3f1b4-4475-4db5-8f99-0af6fb6a80be.svg?style=flat-square
-[badge_issues]:    https://img.shields.io/github/issues/ARCANEDEV/LaravelSettings.svg?style=flat-square
-[badge_package]:   https://img.shields.io/badge/package-arcanedev/laravel--settings-blue.svg?style=flat-square
-[badge_release]:   https://img.shields.io/packagist/v/arcanedev/laravel-settings.svg?style=flat-square
-[badge_downloads]: https://img.shields.io/packagist/dt/arcanedev/laravel-settings.svg?style=flat-square
+[badge_build]:     https://img.shields.io/github/workflow/status/digiton-ma/laravel-settings/run-tests?style=flat-square
+[badge_package]:   https://img.shields.io/badge/package-digiton--ma/laravel--settings-blue.svg?style=flat-square
+[badge_release]:   https://img.shields.io/packagist/v/digiton-ma/laravel-settings.svg?style=flat-square
+[badge_downloads]: https://img.shields.io/packagist/dt/digiton-ma/laravel-settings.svg?style=flat-square
 
-[link-author]:        https://github.com/arcanedev-maroc
-[link-github-repo]:   https://github.com/ARCANEDEV/LaravelSettings
-[link-github-status]: https://github.com/ARCANEDEV/LaravelSettings/actions
-[link-github-issues]: https://github.com/ARCANEDEV/LaravelSettings/issues
-[link-contributors]:  https://github.com/ARCANEDEV/LaravelSettings/graphs/contributors
-[link-packagist]:     https://packagist.org/packages/arcanedev/laravel-settings
-[link-scrutinizer]:   https://scrutinizer-ci.com/g/ARCANEDEV/LaravelSettings/?branch=master
-[link-insight]:       https://insight.sensiolabs.com/projects/1ba3f1b4-4475-4db5-8f99-0af6fb6a80be
+[link-author]:        https://github.com/digiton-ma
+[link-github-repo]:   https://github.com/digiton-ma/laravel-settings
+[link-github-status]: https://github.com/digiton-ma/laravel-settings/actions
+[link-github-issues]: https://github.com/digiton-ma/laravel-settings/issues
+[link-contributors]:  https://github.com/digiton-ma/laravel-settings/graphs/contributors
+[link-packagist]:     https://packagist.org/packages/digiton-ma/laravel-settings

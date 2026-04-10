@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Utilities;
+namespace Digitonma\LaravelSettings\Utilities;
 
 use Illuminate\Support\Arr as BaseArr;
 use UnexpectedValueException;
@@ -10,7 +10,7 @@ use UnexpectedValueException;
 /**
  * Class     Arr
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class Arr extends BaseArr
 {

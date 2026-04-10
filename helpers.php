@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Arcanedev\LaravelSettings\Contracts\Manager;
+use Digitonma\LaravelSettings\Contracts\Manager;
 
 if ( ! function_exists('settings')) {
     /**
@@ -10,10 +10,10 @@ if ( ! function_exists('settings')) {
      *
      * @param  string|null  $driver
      *
-     * @return \Arcanedev\LaravelSettings\Contracts\Manager|\Arcanedev\LaravelSettings\Contracts\Store
+     * @return \Digitonma\LaravelSettings\Contracts\Manager|\Digitonma\LaravelSettings\Contracts\Store
      */
     function settings($driver = null) {
-        /** @var  \Arcanedev\LaravelSettings\Contracts\Manager  $manager */
+        /** @var  \Digitonma\LaravelSettings\Contracts\Manager  $manager */
         $manager = app(Manager::class);
 
         return $driver ? $manager->driver($driver) : $manager;

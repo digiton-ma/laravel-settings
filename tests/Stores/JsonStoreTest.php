@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Tests\Stores;
+namespace Digitonma\LaravelSettings\Tests\Stores;
 
 /**
  * Class     JsonStoreTest
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class JsonStoreTest extends AbstractStoreTestCase
 {
@@ -21,7 +21,7 @@ class JsonStoreTest extends AbstractStoreTestCase
      *
      * @param  array  $data
      *
-     * @return \Arcanedev\LaravelSettings\Contracts\Store|\Arcanedev\LaravelSettings\Stores\JsonStore
+     * @return \Digitonma\LaravelSettings\Contracts\Store|\Digitonma\LaravelSettings\Stores\JsonStore
      */
     protected function createStore(array $data = [])
     {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Tests\Stores;
+namespace Digitonma\LaravelSettings\Tests\Stores;
 
 /**
  * Class     RedisStoreTest
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class RedisStoreTest extends AbstractStoreTestCase
 {
@@ -21,7 +21,7 @@ class RedisStoreTest extends AbstractStoreTestCase
      *
      * @param  array $data
      *
-     * @return \Arcanedev\LaravelSettings\Contracts\Store
+     * @return \Digitonma\LaravelSettings\Contracts\Store
      */
     protected function createStore(array $data = [])
     {

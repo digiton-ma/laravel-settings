@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Tests\Stores;
+namespace Digitonma\LaravelSettings\Tests\Stores;
 
-use Arcanedev\LaravelSettings\Contracts\Store;
+use Digitonma\LaravelSettings\Contracts\Store;
 
 /**
  * Class     ArrayStoreTest
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class ArrayStoreTest extends AbstractStoreTestCase
 {
@@ -23,7 +23,7 @@ class ArrayStoreTest extends AbstractStoreTestCase
      *
      * @param  array $data
      *
-     * @return \Arcanedev\LaravelSettings\Contracts\Store
+     * @return \Digitonma\LaravelSettings\Contracts\Store
      */
     protected function createStore(array $data = [])
     {

@@ -8,18 +8,18 @@
 
 ### Basic methods
 
-You can access the setting instance (Store instance) by injecting the contract `Arcanedev\LaravelSettings\Contracts\Store` to your `__construct()` method or with the `app()` helper.
+You can access the setting instance (Store instance) by injecting the contract `Digitonma\LaravelSettings\Contracts\Store` to your `__construct()` method or with the `app()` helper.
 
 Something like:
 
 ```php
 <?php
 
-use Arcanedev\LaravelSettings\Contracts\Store;
+use Digitonma\LaravelSettings\Contracts\Store;
 
 class RandomNameClass
 {
-    /** @var  \Arcanedev\LaravelSettings\Contracts\Store */
+    /** @var  \Digitonma\LaravelSettings\Contracts\Store */
     protected $settings;
 
     public function __construct(Store $settings) 
@@ -82,7 +82,7 @@ settings()->save();
 
 #### Auto-saving
 
-If you're using Laravel `>= 5.5`, you can add the `Arcanedev\LaravelSettings\Middleware\SaveSettings` middleware to your middleware list in `app\Http\Kernel.php` to save automatically at the end of all HTTP requests/responses stuff.
+If you're using Laravel `>= 5.5`, you can add the `Digitonma\LaravelSettings\Middleware\SaveSettings` middleware to your middleware list in `app\Http\Kernel.php` to save automatically at the end of all HTTP requests/responses stuff.
 
 Don't forget that outside of the HTTP layer, the `settings` middleware it'll not be **TRIGGERED**.
 
@@ -167,7 +167,7 @@ This package also allows you to implement your own custom storage.
 ```php
 <?php namespace App\Settings;
 
-use Arcanedev\LaravelSettings\Stores\AbstractStore;
+use Digitonma\LaravelSettings\Stores\AbstractStore;
 
 class CustomStore extends AbstractStore
 {
@@ -205,12 +205,12 @@ class CustomStore extends AbstractStore
 } 
 ```
 
-If you don't want to use the abstract `Arcanedev\LaravelSettings\Stores\AbstractStore` class and create a class/methods from scratch, use the `Arcanedev\LaravelSettings\Contracts\Store` contract instead.
+If you don't want to use the abstract `Digitonma\LaravelSettings\Stores\AbstractStore` class and create a class/methods from scratch, use the `Digitonma\LaravelSettings\Contracts\Store` contract instead.
 
 ```php
 <?php namespace App\Settings;
 
-use Arcanedev\LaravelSettings\Contracts\Store;
+use Digitonma\LaravelSettings\Contracts\Store;
 
 class CustomStore implements Store
 {
@@ -232,7 +232,7 @@ return [
 ];
 ```
 
-If you used the the abstract `Arcanedev\LaravelSettings\Stores\AbstractStore` class, you can pass a `options` array like credential keys, path ...
+If you used the the abstract `Digitonma\LaravelSettings\Stores\AbstractStore` class, you can pass a `options` array like credential keys, path ...
 
 ```php
 return [
@@ -265,13 +265,13 @@ settings()->extend('custom', function () {
 
 ```php
 settings()->extend('custom-store-with-abstract-class', function () {
-    return new class extends Arcanedev\LaravelSettings\Stores\AbstractStore {
+    return new class extends Digitonma\LaravelSettings\Stores\AbstractStore {
         // implement the methods here
     };
 });
 
 settings()->extend('custom-store-with-contract', function () {
-    return new class implements Arcanedev\LaravelSettings\Contracts\Store {
+    return new class implements Digitonma\LaravelSettings\Contracts\Store {
         // same here
     };
 });
@@ -289,16 +289,16 @@ $fooValue = settings('custom')->get('foo');
 
 **BUT i'm injecting the store contract in the (Controller, Service ...) constructor, so i got the default store instead**
 
-Instead of the `Arcanedev\LaravelSettings\Contracts\Store`, use `Arcanedev\LaravelSettings\Contracts\Manager` contract:
+Instead of the `Digitonma\LaravelSettings\Contracts\Store`, use `Digitonma\LaravelSettings\Contracts\Manager` contract:
 
 ```php
 <?php
 
-use Arcanedev\LaravelSettings\Contracts\Manager;
+use Digitonma\LaravelSettings\Contracts\Manager;
 
 class RandomNameClass
 {
-    /** @var  \Arcanedev\LaravelSettings\Contracts\Store */
+    /** @var  \Digitonma\LaravelSettings\Contracts\Store */
     protected $settings;
 
     public function __construct(Manager $manager) 

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Stores;
+namespace Digitonma\LaravelSettings\Stores;
 
-use Arcanedev\LaravelSettings\Contracts\Store;
-use Arcanedev\LaravelSettings\Utilities\Arr;
+use Digitonma\LaravelSettings\Contracts\Store;
+use Digitonma\LaravelSettings\Utilities\Arr;
 use Illuminate\Contracts\Foundation\Application;
 
 /**
  * Class     AbstractStore
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 abstract class AbstractStore implements Store
 {

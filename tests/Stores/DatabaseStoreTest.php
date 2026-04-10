@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Tests\Stores;
+namespace Digitonma\LaravelSettings\Tests\Stores;
 
-use Arcanedev\LaravelSettings\Models\Setting;
-use Arcanedev\LaravelSettings\Stores\DatabaseStore;
+use Digitonma\LaravelSettings\Models\Setting;
+use Digitonma\LaravelSettings\Stores\DatabaseStore;
 
 /**
  * Class     DatabaseStoreTest
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class DatabaseStoreTest extends AbstractStoreTestCase
 {
@@ -24,7 +24,7 @@ class DatabaseStoreTest extends AbstractStoreTestCase
      *
      * @param  array $data
      *
-     * @return \Arcanedev\LaravelSettings\Contracts\Store|\Arcanedev\LaravelSettings\Stores\DatabaseStore
+     * @return \Digitonma\LaravelSettings\Contracts\Store|\Digitonma\LaravelSettings\Stores\DatabaseStore
      */
     protected function createStore(array $data = [])
     {
@@ -56,7 +56,7 @@ class DatabaseStoreTest extends AbstractStoreTestCase
     /** @test */
     public function it_can_constraint_query(): void
     {
-        /** @var  \Arcanedev\LaravelSettings\Stores\DatabaseStore  $store */
+        /** @var  \Digitonma\LaravelSettings\Stores\DatabaseStore  $store */
         $store = $this->createStore();
 
         $store->set('foo', 'bar');

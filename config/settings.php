@@ -18,11 +18,11 @@ return [
     'drivers' => [
 
         'array' => [
-            'driver'  => Arcanedev\LaravelSettings\Stores\ArrayStore::class,
+            'driver'  => Digitonma\LaravelSettings\Stores\ArrayStore::class,
         ],
 
         'json' => [
-            'driver'  => Arcanedev\LaravelSettings\Stores\JsonStore::class,
+            'driver'  => Digitonma\LaravelSettings\Stores\JsonStore::class,
 
             'options' => [
                 'path'   => storage_path('app/settings.json'),
@@ -30,17 +30,17 @@ return [
         ],
 
         'database' => [
-            'driver'  => Arcanedev\LaravelSettings\Stores\DatabaseStore::class,
+            'driver'  => Digitonma\LaravelSettings\Stores\DatabaseStore::class,
 
             'options' => [
                 'connection' => null,
                 'table'      => 'settings',
-                'model'      => Arcanedev\LaravelSettings\Models\Setting::class,
+                'model'      => Digitonma\LaravelSettings\Models\Setting::class,
             ],
         ],
 
         'redis' => [
-            'driver'  => Arcanedev\LaravelSettings\Stores\RedisStore::class,
+            'driver'  => Digitonma\LaravelSettings\Stores\RedisStore::class,
 
             'options' => [
                 'client' => 'predis',

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Contracts;
+namespace Digitonma\LaravelSettings\Contracts;
 
 use Closure;
 
 /**
  * Interface  Manager
  *
- * @author    ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author    digiton-ma <contact@digiton.ma>
  */
 interface Manager
 {
@@ -42,7 +42,7 @@ interface Manager
      *
      * @param  string|null  $driver
      *
-     * @return \Arcanedev\LaravelSettings\Contracts\Store
+     * @return \Digitonma\LaravelSettings\Contracts\Store
      */
     public function driver($driver = null);
 

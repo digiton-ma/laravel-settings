@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Middleware;
+namespace Digitonma\LaravelSettings\Middleware;
 
-use Arcanedev\LaravelSettings\Contracts\Store;
+use Digitonma\LaravelSettings\Contracts\Store;
 use Closure;
 
 /**
  * Class     SaveSettings
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class SaveSettings
 {
@@ -19,7 +19,7 @@ class SaveSettings
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Arcanedev\LaravelSettings\Contracts\Store */
+    /** @var  \Digitonma\LaravelSettings\Contracts\Store */
     protected $settings;
 
     /* -----------------------------------------------------------------
@@ -30,7 +30,7 @@ class SaveSettings
     /**
      * SaveSettings constructor.
      *
-     * @param  \Arcanedev\LaravelSettings\Contracts\Store  $settings
+     * @param  \Digitonma\LaravelSettings\Contracts\Store  $settings
      */
     public function __construct(Store $settings)
     {

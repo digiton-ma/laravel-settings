@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Tests\Stores;
+namespace Digitonma\LaravelSettings\Tests\Stores;
 
-use Arcanedev\LaravelSettings\Contracts\Store;
-use Arcanedev\LaravelSettings\Stores\DatabaseStore;
-use Arcanedev\LaravelSettings\Tests\TestCase;
+use Digitonma\LaravelSettings\Contracts\Store;
+use Digitonma\LaravelSettings\Stores\DatabaseStore;
+use Digitonma\LaravelSettings\Tests\TestCase;
 use Illuminate\Support\Facades\Route;
 use UnexpectedValueException;
 
 /**
  * Class     AbstractStoreTest
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 abstract class AbstractStoreTestCase extends TestCase
 {
@@ -27,7 +27,7 @@ abstract class AbstractStoreTestCase extends TestCase
      *
      * @param  array  $data
      *
-     * @return \Arcanedev\LaravelSettings\Contracts\Store|mixed
+     * @return \Digitonma\LaravelSettings\Contracts\Store|mixed
      */
     protected abstract function createStore(array $data = []);
 
@@ -36,7 +36,7 @@ abstract class AbstractStoreTestCase extends TestCase
      *
      * @param  string  $driver
      *
-     * @return \Arcanedev\LaravelSettings\Contracts\Store
+     * @return \Digitonma\LaravelSettings\Contracts\Store
      */
     protected function getStore(string $driver)
     {
@@ -206,7 +206,7 @@ abstract class AbstractStoreTestCase extends TestCase
      */
 
     /**
-     * @param  \Arcanedev\LaravelSettings\Contracts\Store  $store
+     * @param  \Digitonma\LaravelSettings\Contracts\Store  $store
      * @param  mixed                                       $expected
      * @param  string|null                                 $message
      */
@@ -222,7 +222,7 @@ abstract class AbstractStoreTestCase extends TestCase
     }
 
     /**
-     * @param  \Arcanedev\LaravelSettings\Contracts\Store  $store
+     * @param  \Digitonma\LaravelSettings\Contracts\Store  $store
      * @param  string                                      $key
      * @param  mixed                                       $expected
      * @param  string|null                                 $message

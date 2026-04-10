@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings;
+namespace Digitonma\LaravelSettings;
 
-use Arcanedev\LaravelSettings\Contracts\Store as StoreContract;
-use Arcanedev\LaravelSettings\Contracts\Manager as SettingsManagerContract;
+use Digitonma\LaravelSettings\Contracts\Store as StoreContract;
+use Digitonma\LaravelSettings\Contracts\Manager as SettingsManagerContract;
 use Illuminate\Support\{Arr, Manager};
 
 /**
  * Class     SettingsManager
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class SettingsManager extends Manager implements SettingsManagerContract
 {

@@ -55,7 +55,7 @@
 You can install this package via [Composer](http://getcomposer.org/) by running this command:
 
 ```bash
-composer require arcanedev/laravel-settings
+composer require digiton-ma/laravel-settings
 ```
 
 ## Laravel
@@ -69,7 +69,7 @@ Once the package is installed, you can register the service provider in `config/
 ```php
 'providers' => [
     ...
-    Arcanedev\LaravelSettings\SettingsServiceProvider::class,
+    Digitonma\LaravelSettings\SettingsServiceProvider::class,
 ],
 ```
 
@@ -78,7 +78,7 @@ Once the package is installed, you can register the service provider in `config/
 To publish the config file by running this command:
 
 ```bash
-php artisan vendor:publish --provider="Arcanedev\LaravelSettings\SettingsServiceProvider"
+php artisan vendor:publish --provider="Digitonma\LaravelSettings\SettingsServiceProvider"
 ```
 
-> **Note:** If you want to publish the laravel settings' migrations, you need to set the `Arcanedev\LaravelSettings\SettingsManager::$runsMigrations` value to `false` in your `ServiceProvider`.
+> **Note:** If you want to publish the laravel settings' migrations, you need to set the `Digitonma\LaravelSettings\SettingsManager::$runsMigrations` value to `false` in your `ServiceProvider`.

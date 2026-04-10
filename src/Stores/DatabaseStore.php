@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Stores;
+namespace Digitonma\LaravelSettings\Stores;
 
-use Arcanedev\LaravelSettings\Models\Setting as SettingModel;
-use Arcanedev\LaravelSettings\Utilities\Arr;
+use Digitonma\LaravelSettings\Models\Setting as SettingModel;
+use Digitonma\LaravelSettings\Utilities\Arr;
 use Closure;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Carbon;
@@ -13,7 +13,7 @@ use Illuminate\Support\Carbon;
 /**
  * Class     DatabaseStore
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class DatabaseStore extends AbstractStore
 {

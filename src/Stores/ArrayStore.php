@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Stores;
+namespace Digitonma\LaravelSettings\Stores;
 
 /**
  * Class     ArrayStore
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class ArrayStore extends AbstractStore
 {

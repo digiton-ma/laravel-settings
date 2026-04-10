@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Arcanedev\LaravelSettings\Models;
+namespace Digitonma\LaravelSettings\Models;
 
 use Arcanedev\Support\Database\PrefixedModel;
 
 /**
  * Class     Setting
  *
- * @author   ARCANEDEV <arcanedev.maroc@gmail.com>
+ * @author   digiton-ma <contact@digiton.ma>
  */
 class Setting extends PrefixedModel
 {
