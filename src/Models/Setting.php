@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Digitonma\LaravelSettings\Models;
 
-use Arcanedev\Support\Database\PrefixedModel;
+use Digitonma\Support\Database\PrefixedModel;
 
 /**
  * Class     Setting

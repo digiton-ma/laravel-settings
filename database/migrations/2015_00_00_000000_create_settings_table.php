@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use Arcanedev\Support\Database\Migration;
+use Digitonma\Support\Database\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
 return new class extends Migration

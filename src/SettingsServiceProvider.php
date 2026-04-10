@@ -6,7 +6,7 @@ namespace Digitonma\LaravelSettings;
 
 use Digitonma\LaravelSettings\Contracts\Manager as ManagerContract;
 use Digitonma\LaravelSettings\Contracts\Store as StoreContract;
-use Arcanedev\Support\Providers\PackageServiceProvider;
+use Digitonma\Support\Providers\PackageServiceProvider;
 use Illuminate\Contracts\Support\DeferrableProvider;
 
 /**
