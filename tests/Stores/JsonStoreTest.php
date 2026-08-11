@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Digitonma\LaravelSettings\Tests\Stores;
 
+use PHPUnit\Framework\Attributes\Test;
+
 /**
  * Class     JsonStoreTest
  *
@@ -45,7 +47,7 @@ class JsonStoreTest extends AbstractStoreTestCase
      | -----------------------------------------------------------------
      */
 
-    /** @test */
+    #[Test]
     public function it_must_throw_an_exception_when_file_is_invalid(): void
     {
         $this->expectException(\RuntimeException::class);

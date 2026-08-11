@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Digitonma\LaravelSettings\Tests;
 
+use PHPUnit\Framework\Attributes\Test;
+
 /**
  * Class     SettingsManagerTest
  *
@@ -43,7 +45,7 @@ class SettingsManagerTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @test */
+    #[Test]
     public function it_can_be_instantiated(): void
     {
         $expectations = [
@@ -56,7 +58,7 @@ class SettingsManagerTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function it_can_be_instantiated_with_helper(): void
     {
         $expectations = [
@@ -69,13 +71,13 @@ class SettingsManagerTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function it_can_get_default_store_name(): void
     {
         static::assertSame('json', $this->manager->getDefaultDriver());
     }
 
-    /** @test */
+    #[Test]
     public function it_can_get_default_store_by_contract(): void
     {
         $store = $this->app->make(\Digitonma\LaravelSettings\Contracts\Store::class);
@@ -90,7 +92,7 @@ class SettingsManagerTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function it_can_get_store_by_name(): void
     {
         $expectations = [
@@ -107,7 +109,7 @@ class SettingsManagerTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function it_can_get_store_by_name_via_helper(): void
     {
         $expectations = [

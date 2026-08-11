@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Digitonma\LaravelSettings\Tests;
 
+use PHPUnit\Framework\Attributes\Test;
+
 /**
  * Class     SettingsServiceProviderTest
  *
@@ -43,7 +45,7 @@ class SettingsServiceProviderTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @test */
+    #[Test]
     public function it_can_be_instantiated(): void
     {
         $expectations = [
@@ -59,7 +61,7 @@ class SettingsServiceProviderTest extends TestCase
         }
     }
 
-    /** @test */
+    #[Test]
     public function it_can_provides(): void
     {
         $expected = [

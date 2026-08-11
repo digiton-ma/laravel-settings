@@ -6,6 +6,7 @@ namespace Digitonma\LaravelSettings\Tests\Stores;
 
 use Digitonma\LaravelSettings\Models\Setting;
 use Digitonma\LaravelSettings\Stores\DatabaseStore;
+use PHPUnit\Framework\Attributes\Test;
 
 /**
  * Class     DatabaseStoreTest
@@ -36,7 +37,7 @@ class DatabaseStoreTest extends AbstractStoreTestCase
      | -----------------------------------------------------------------
      */
 
-    /** @test */
+    #[Test]
     public function it_can_set_extra_columns(): void
     {
         $store = $this->createStore();
@@ -53,7 +54,7 @@ class DatabaseStoreTest extends AbstractStoreTestCase
         static::assertSame('baz', $store->setExtraColumns(['user_id' => 2])->get('foo'));
     }
 
-    /** @test */
+    #[Test]
     public function it_can_constraint_query(): void
     {
         /** @var  \Digitonma\LaravelSettings\Stores\DatabaseStore  $store */
@@ -75,7 +76,7 @@ class DatabaseStoreTest extends AbstractStoreTestCase
         static::assertSame(['foo' => 'bar'], $store->all());
     }
 
-    /** @test */
+    #[Test]
     public function it_can_forget_bis(): void
     {
         // TODO: Apply this to all the stores ?? This issue is masked by the container = The stores are resolved with singleton pattern

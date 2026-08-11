@@ -8,6 +8,7 @@ use Digitonma\LaravelSettings\Contracts\Store;
 use Digitonma\LaravelSettings\Stores\DatabaseStore;
 use Digitonma\LaravelSettings\Tests\TestCase;
 use Illuminate\Support\Facades\Route;
+use PHPUnit\Framework\Attributes\Test;
 use UnexpectedValueException;
 
 /**
@@ -48,7 +49,7 @@ abstract class AbstractStoreTestCase extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @test */
+    #[Test]
     public function it_can_init_with_empty_data(): void
     {
         $store = $this->createStore();
@@ -56,7 +57,7 @@ abstract class AbstractStoreTestCase extends TestCase
         static::assertEquals([], $store->all());
     }
 
-    /** @test */
+    #[Test]
     public function it_can_save_the_changes(): void
     {
         $store = $this->createStore();
@@ -66,7 +67,7 @@ abstract class AbstractStoreTestCase extends TestCase
         static::assertStoreHasDataWithKey($store, 'foo', 'bar');
     }
 
-    /** @test */
+    #[Test]
     public function it_can_check_data_exists(): void
     {
         $store = $this->createStore();
@@ -80,7 +81,7 @@ abstract class AbstractStoreTestCase extends TestCase
         static::assertFalse($store->has('foo.baz'));
     }
 
-    /** @test */
+    #[Test]
     public function it_can_set_with_nested_keys(): void
     {
         $store = $this->createStore();
@@ -90,7 +91,7 @@ abstract class AbstractStoreTestCase extends TestCase
         static::assertStoreHasData($store, ['foo' => ['bar' => 'baz']]);
     }
 
-    /** @test */
+    #[Test]
     public function it_must_throw_an_exception_when_setting_nested_key_on_non_array_member(): void
     {
         $this->expectException(UnexpectedValueException::class);
@@ -102,7 +103,7 @@ abstract class AbstractStoreTestCase extends TestCase
         $store->set('foo.bar', 'baz');
     }
 
-    /** @test */
+    #[Test]
     public function it_can_forget(): void
     {
         $store = $this->createStore();
@@ -117,7 +118,7 @@ abstract class AbstractStoreTestCase extends TestCase
         static::assertStoreHasData($store, ['bar' => 'baz']);
     }
 
-    /** @test */
+    #[Test]
     public function it_can_forget_nested_key(): void
     {
         $store = $this->createStore();
@@ -161,7 +162,7 @@ abstract class AbstractStoreTestCase extends TestCase
         static::assertStoreHasData($store, $expected);
     }
 
-    /** @test */
+    #[Test]
     public function it_can_flush_all_data(): void
     {
         $store = $this->createStore();
@@ -175,7 +176,7 @@ abstract class AbstractStoreTestCase extends TestCase
         static::assertStoreHasData($store, []);
     }
 
-    /** @test */
+    #[Test]
     public function it_can_save_automatically_with_middleware(): void
     {
         Route::middleware('web')->any('/testing-route-with-save-settings-middleware', function () {
