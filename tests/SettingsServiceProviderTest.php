@@ -51,8 +51,6 @@ class SettingsServiceProviderTest extends TestCase
         $expectations = [
             \Illuminate\Support\ServiceProvider::class,
             \Illuminate\Contracts\Support\DeferrableProvider::class,
-            \Digitonma\Support\Providers\ServiceProvider::class,
-            \Digitonma\Support\Providers\PackageServiceProvider::class,
             \Digitonma\LaravelSettings\SettingsServiceProvider::class
         ];
 

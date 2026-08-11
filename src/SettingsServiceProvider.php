@@ -6,15 +6,15 @@ namespace Digitonma\LaravelSettings;
 
 use Digitonma\LaravelSettings\Contracts\Manager as ManagerContract;
 use Digitonma\LaravelSettings\Contracts\Store as StoreContract;
-use Digitonma\Support\Providers\PackageServiceProvider;
 use Illuminate\Contracts\Support\DeferrableProvider;
+use Illuminate\Support\ServiceProvider;
 
 /**
  * Class     SettingsServiceProvider
  *
  * @author   digiton-ma <contact@digiton.ma>
  */
-class SettingsServiceProvider extends PackageServiceProvider implements DeferrableProvider
+class SettingsServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /* -----------------------------------------------------------------
      |  Properties
@@ -38,8 +38,6 @@ class SettingsServiceProvider extends PackageServiceProvider implements Deferrab
      */
     public function register(): void
     {
-        parent::register();
-
         $this->registerConfig();
 
         $this->registerSettingsManager();
@@ -71,6 +69,54 @@ class SettingsServiceProvider extends PackageServiceProvider implements Deferrab
     }
 
     /* -----------------------------------------------------------------
+     |  Config Methods
+     | -----------------------------------------------------------------
+     */
+
+    /**
+     * Register the package config.
+     */
+    private function registerConfig(): void
+    {
+        $this->mergeConfigFrom(
+            $this->getBasePath().'/config/'.$this->package.'.php', $this->package
+        );
+    }
+
+    /**
+     * Publish the package config.
+     */
+    private function publishConfig(): void
+    {
+        $this->publishes([
+            $this->getBasePath().'/config/'.$this->package.'.php' => config_path($this->package.'.php'),
+        ], 'config');
+    }
+
+    /* -----------------------------------------------------------------
+     |  Migration Methods
+     | -----------------------------------------------------------------
+     */
+
+    /**
+     * Publish the package migrations.
+     */
+    private function publishMigrations(): void
+    {
+        $this->publishes([
+            $this->getBasePath().'/database/migrations' => database_path('migrations'),
+        ], 'migrations');
+    }
+
+    /**
+     * Load the package migrations.
+     */
+    private function loadMigrations(): void
+    {
+        $this->loadMigrationsFrom($this->getBasePath().'/database/migrations');
+    }
+
+    /* -----------------------------------------------------------------
      |  Other Methods
      | -----------------------------------------------------------------
      */
@@ -80,7 +126,7 @@ class SettingsServiceProvider extends PackageServiceProvider implements Deferrab
      */
     private function registerSettingsManager(): void
     {
-        $this->singleton(ManagerContract::class, SettingsManager::class);
+        $this->app->singleton(ManagerContract::class, SettingsManager::class);
 
         $this->app->extend(ManagerContract::class, function (ManagerContract $manager, $app) {
             foreach ($app['config']->get('settings.drivers', []) as $driver => $params) {
@@ -90,8 +136,18 @@ class SettingsServiceProvider extends PackageServiceProvider implements Deferrab
             return $manager;
         });
 
-        $this->singleton(StoreContract::class, function ($app): StoreContract {
+        $this->app->singleton(StoreContract::class, function ($app): StoreContract {
             return $app[ManagerContract::class]->driver();
         });
+    }
+
+    /**
+     * Get the package base path.
+     *
+     * @return string
+     */
+    private function getBasePath(): string
+    {
+        return dirname(__DIR__);
     }
 }
